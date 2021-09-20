@@ -27,10 +27,10 @@ export class EventListComponent implements OnInit {
 
   }
 
-  handleEventClicked(data:String){
+ /* handleEventClicked(data:String){
 
     console.log('received',data);
 
-  }
+  }*/
 
 }
