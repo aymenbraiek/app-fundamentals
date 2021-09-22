@@ -2,7 +2,9 @@
     <h2>{{event?.name}}</h2>
     <div>Date: {{event?.date}}</div>
     <!--<div [ngClass]="{green: event?.time === '9:00 am'}" [ngSwitch]="event?.time"> Time:{{event?.time}} -->
-        <div [ngClass]="getStartTimeClass()" [ngSwitch]="event?.time"> Time:{{event?.time}}
+        <!-- <div [ngStyle]="{'color':event?.time === '9:00 am'? '#003300':'#bbb','font-weight'
+    :event?.time ==='9:00 am'? 'bold':'normal'}" [ngSwitch]="event?.time"> Time:{{event?.time}} -->
+    <div [ngStyle]="getStartStyle()" [ngSwitch]="event?.time"> Time:{{event?.time}}
         <span *ngSwitchCase="'8:00 am'">(Early Start)</span>
         <span *ngSwitchCase="'9:00 am'">(Late Start)</span>
         <span *ngSwitchDefault>(Normal Start)</span>
