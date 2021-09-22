@@ -155,7 +155,7 @@ export class EventListComponent implements OnInit {
       name: 'ng-conf 2037',
       date: '5/4/2037',
       time: '9:00 am',
-      price: 759.00,
+      
       imageUrl: '/assets/images/ng-conf.png',
       location: {
         address: 'The Palatial America Hotel',
