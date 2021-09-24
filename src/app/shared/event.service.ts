@@ -13,6 +13,10 @@ export class EventService {
 
   }
 
+  getEvent(id:number){
+    return this.EVENTS.find(event=> event.id=== id);
+  }
+
    EVENTS = [
     {
       id: 1,
@@ -20,7 +24,7 @@ export class EventService {
       date: '9/26/2036',
       time: '10:00 am',
       price: 599.99,
-      imageUrl: '/assets/images/angularconnect-shield.png',
+      imageUrl: '/assets/images/Angular_full_color_logo.svg.png',
       location: {
         address: '1057 DT',
         city: 'London',

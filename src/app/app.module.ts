@@ -9,6 +9,7 @@ import { EventThumbnailComponent } from './components/events/event-thumbnail/eve
 import { NavbarComponent } from './components/nav/navbar/navbar.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EventDetailsComponent } from './components/events/event-details/event-details/event-details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     EventsComponent,
   EventListComponent,
   EventThumbnailComponent,
-  NavbarComponent
+  NavbarComponent,
+  EventDetailsComponent
+  
   ],
   imports: [
     BrowserModule,
