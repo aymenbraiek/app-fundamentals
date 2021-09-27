@@ -14,7 +14,10 @@ export class EventService {
   }
 
   getEvent(id:number){
-    return this.EVENTS.find(event=> event.id=== id);
+    console.log('event'+id)
+    
+    return this.EVENTS.find(p=> p.id=== id);
+    
   }
 
    EVENTS = [

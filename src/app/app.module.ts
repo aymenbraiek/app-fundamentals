@@ -11,6 +11,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EventDetailsComponent } from './components/events/event-details/event-details/event-details.component';
 import { EventAddComponent } from './components/events/add/event-add/event-add.component';
+import { ErrorComponent } from './components/errors/error/error.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { EventAddComponent } from './components/events/add/event-add/event-add.c
   EventThumbnailComponent,
   NavbarComponent,
   EventDetailsComponent,
-  EventAddComponent
+  EventAddComponent,
+  ErrorComponent
+
   
   ],
   imports: [
