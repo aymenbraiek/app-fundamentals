@@ -32,7 +32,20 @@ import { ErrorComponent } from './components/errors/error/error.component';
     ToastrModule.forRoot( ),
     BrowserAnimationsModule
   ],
-  providers: [],
+  //when request canDeactivateCreateEvent fulfill the useValue
+  providers: [
+    {
+      provide: 'canDeactivateCreateEvent',
+      useValue: checkDirtyState
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+export function checkDirtyState(component:EventAddComponent){
+  if(component.isDirty)
+  return window.confirm(' you have not saved the event, do you really want to cancel')
+return true;
+}

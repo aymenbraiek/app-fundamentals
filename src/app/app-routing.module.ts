@@ -7,7 +7,8 @@ import { EventRouteActivatorService } from './components/events/event-details/ev
 import { EventListComponent } from './components/events/event-list/event-list.component';
 //conflit entre  events/new && events/:id mettre path of new event first statement 
 const routes: Routes = [
-{path:'events/new',component:EventAddComponent},
+  //canDeactivate two method to define canDeactivate =function or service 
+{path:'events/new',component:EventAddComponent,canDeactivate:['canDeactivateCreateEvent']},
 {path:'events',component:EventListComponent},
 {path:'events/:id',component:EventDetailsComponent,canActivate:[EventRouteActivatorService]},
 {path:'',redirectTo:'/events',pathMatch:'full'},

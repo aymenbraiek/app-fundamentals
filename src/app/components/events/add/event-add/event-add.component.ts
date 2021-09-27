@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./event-add.component.css']
 })
 export class EventAddComponent implements OnInit {
-
+isDirty:boolean=true;
   constructor(private router:Router) { }
 
   ngOnInit() {
