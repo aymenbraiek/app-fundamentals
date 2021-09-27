@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -6,10 +7,13 @@ import { Injectable } from '@angular/core';
 export class EventService {
 
   constructor() { }
-
+// Observables are like stream of data they are kind like arrays where the date arrives over time
   getEvents(){
 
-    return this.EVENTS;
+    let subject=new Subject()
+    setTimeout(()=> {subject.next(this.EVENTS);subject.complete();},100)
+
+    return subject;
 
   }
 
